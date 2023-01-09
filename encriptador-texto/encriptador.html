@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="../static/css/style-challenge1.css">
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- FontAwesome CSS v6.2.1-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-9">
+                <img id="logo" src="../static/images/Logo.png" alt="Logo Alura">
+                <textarea name="" id="texto-ingresado" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+                <div class="container mt-5">
+                    <label for="" class="d-block mb-1">
+                        <i class="fa-solid fa-circle-exclamation"></i>  
+                        Solo letras minúsculas y sin acentos
+                    </label>
+                    <div class="d-block d-md-flex justify-content-center w-100">
+                        <button type="button" class="btn mx-2" id="encriptar">Encriptar</button>
+                        <button type="button" class="btn mx-2" id="desencriptar">Desencriptar</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div id="resultado" class="card border-1 bg-white rounded-4 m-2 d-flex align-items-center">
+                    <img id="sin-mensaje" src="../static/images/Muñeco.png" alt="Muñeco">
+                  <div class="card-body">
+                    <h4 class="card-title">Ningún mensaje fue encontrado</h4>
+                    <p class="card-text">Ingresa el texto que desees encriptar o desencriptar.</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
