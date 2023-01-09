@@ -49,7 +49,7 @@ html{
 #resultado{
     display: flex;
     align-items: flex-start;
-    padding: 0px;
+    padding: 4px;
     gap: 24px;
     background-color: #FFFFFF;
     height: 95vh;
@@ -95,7 +95,7 @@ p{
 }
 
 #encriptar{
-    padding: 1rem;
+    padding: 1vw;
 
     width: 30vw;
     height: 10vh;
@@ -109,7 +109,7 @@ p{
 #desencriptar{
     box-sizing: border-box;
 
-    padding: 1rem;
+    padding: 1vw;
 
     width: 30vw;
     height: 10vh;
@@ -123,3 +123,23 @@ p{
 label{
     margin-left: 5vw;
 }
+
+@media only screen and (max-width: 768px) {
+    #sin-mensaje{
+      display: none;
+    }
+
+    #resultado{
+        height: auto;
+        margin-top: 50px !important;
+    }
+    
+    #encriptar{
+        width: 100%;
+    }
+    
+    #desencriptar{
+        width: 100%;
+        margin-top: 5px;
+    }
+  }
