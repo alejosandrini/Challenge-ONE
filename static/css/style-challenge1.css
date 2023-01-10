@@ -46,6 +46,21 @@ html{
     background-color: #F3F5FC;
 }
 
+#texto-resultado{
+    width: 100%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+
+    color: #0A3871;
+
+    border: none;
+    outline: none;
+    resize: none;
+}
+
 #resultado{
     display: flex;
     align-items: flex-start;

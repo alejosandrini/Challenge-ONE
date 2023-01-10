@@ -4,7 +4,7 @@
     La letra "o" es convertida para "ober"
     La letra "u" es convertida para "ufat"*/
 function textoValido(texto){
-    let letrasValidas = /[a-z]/
+    let letrasValidas = /[a-z\s,.]/
     for(let letra of texto){
         if(letra.search(letrasValidas) == -1){
             console.log(letra)
@@ -16,15 +16,14 @@ function textoValido(texto){
 
 function mostrarError(mensaje){
     let contenedor = document.getElementById("resultado");
-    contenedor.innerHTML = `<p class="p-3 mt-2 msg-error">${mensaje}</p>`
+    contenedor.innerHTML = `<p class="p-3 mt-2 msg-error">${mensaje}</p>`;
     let imagen = document.createElement('img');
-    imagen.setAttribute("src","../static/images/MuñecoError.png")
-    imagen.setAttribute("alt","Muñeco hubo error")
-    imagen.setAttribute("id","img-resultado")
-    contenedor.appendChild(imagen)
-    let textarea = document.getElementById("texto-ingresado")
-    textarea.value=""
-    textarea.focus()
+    imagen.setAttribute("src","../static/images/MuñecoError.png");
+    imagen.setAttribute("alt","Muñeco hubo error");
+    imagen.setAttribute("id","img-resultado");
+    contenedor.appendChild(imagen);
+    let textarea = document.getElementById("texto-ingresado");
+    textarea.select();
 }
 
 function encriptar(){
@@ -59,11 +58,30 @@ function desencriptar(){
 
 function mostrarResultado(texto){
     let contenedor = document.getElementById("resultado");
-    contenedor.innerHTML = `<h4 class="mt-3 h-75">${texto}</h4>`
+    contenedor.innerHTML = ``;
+    let input = document.createElement('textarea');
+    input.setAttribute("cols", "16");
+    input.setAttribute("rows", "8");
+    input.setAttribute("id", "texto-resultado");
+    input.classList.add('mt-3');
+    input.classList.add('h-75');
+    input.setAttribute("readonly", true);
+    input.value = texto;
+    
     let botonCopiar = document.createElement('button');
-    botonCopiar.innerText = "Copiar"
+    botonCopiar.innerText = "Copiar";
     botonCopiar.classList.add('btn');
     botonCopiar.setAttribute("id","botonCopiar");
-    botonCopiar.setAttribute("type","button")
-    contenedor.appendChild(botonCopiar)
+    botonCopiar.setAttribute("type","button");
+    botonCopiar.setAttribute("onclick","copiar()");
+    
+    contenedor.appendChild(input);
+    contenedor.appendChild(botonCopiar);
 }
+
+function copiar() {
+    let copyText = document.getElementById("texto-resultado");
+    copyText.select();
+    document.execCommand("copy");
+  }
+  
