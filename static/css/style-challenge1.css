@@ -17,10 +17,10 @@ html{
     margin-left: 3vw;
 }
 
-#sin-mensaje{
+#img-resultado{
     width: 20vw;
     height: auto;
-    margin-top: 10vw;
+    margin-top: 8vw;
 }
 
 #texto-ingresado{
@@ -120,12 +120,36 @@ p{
     border-radius: 24px;
 }
 
+#botonCopiar{
+    padding: 1vw;
+
+    width: 90%;
+    height: 10vh;
+
+    background: #F3F5FC;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+}
+
 label{
     margin-left: 5vw;
 }
 
+.msg-error{
+    color: #343A40;
+    border: 1px solid grey;
+    border-radius: 12px;
+    background: rgba(255, 36, 36, 0.433);
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+}
+
 @media only screen and (max-width: 768px) {
-    #sin-mensaje{
+    #img-resultado{
       display: none;
     }
 

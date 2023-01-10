@@ -28,15 +28,15 @@
                         Solo letras minúsculas y sin acentos
                     </label>
                     <div class="d-block d-sm-flex justify-content-center w-100">
-                        <button type="button" class="btn mx-2" id="encriptar">Encriptar</button>
-                        <button type="button" class="btn mx-2" id="desencriptar">Desencriptar</button>
+                        <button type="button" class="btn mx-2" id="encriptar" onclick="encriptar()">Encriptar</button>
+                        <button type="button" class="btn mx-2" id="desencriptar" onclick="desencriptar()">Desencriptar</button>
                     </div>
 
                 </div>
             </div>
             <div class="col-md-3">
                 <div id="resultado" class="card border-1 bg-white rounded-4 m-2 d-flex align-items-center">
-                    <img id="sin-mensaje" src="../static/images/Muñeco.png" alt="Muñeco">
+                    <img id="img-resultado" src="../static/images/Muñeco.png" alt="Muñeco">
                   <div class="card-body">
                     <h4 class="card-title">Ningún mensaje fue encontrado</h4>
                     <p class="card-text">Ingresa el texto que desees encriptar o desencriptar.</p>
@@ -45,5 +45,6 @@
             </div>
         </div>
     </div>
+    <script src="../static/javascript/encriptador.js"></script>
 </body>
 </html>
