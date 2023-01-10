@@ -6,32 +6,34 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- FontAwesome CSS v6.2.1-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/brands.min.css" integrity="sha512-G/T7HQJXSeNV7mKMXeJKlYNJ0jrs8RsWzYG7rVACye+qrcUhEAYKYzaa+VFy6eFzM2+/JT1Q+eqBbZFSHmJQew==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="./static/css/style.css">
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-expand-sm bg-light">
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-sm ">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar scroll</a>
+          <a class="navbar-brand text-light" href="#">Portafolio</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link active text-light" aria-current="page" href="#">Inicio</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Link
+                <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Challenges ONE
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Action</a></li>
@@ -41,7 +43,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled">Link</a>
+                <a class="nav-link text-light" href="#">Contacto</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -53,27 +55,78 @@
       </nav>
   </header>
   <main>
-    <div class="card-group">
-        <div class="card">
-            <img class="card-img-top" src="holder.js/100x180/" alt="Card image cap">
-            <div class="card-body">
-                <h4 class="card-title">Title</h4>
-                <p class="card-text">Text</p>
-                <a name="" id="" class="btn btn-secondary" href="encriptador-texto/encriptador.html" role="button">Ver más</a>
-            </div>
+    <div class="container-fluid p-2">
+      <div class="content">
+        <div class="header d-flex border-bottom border-2 border-gold mb-2 py-1">
+          <h3>Challenges One</h3>
+          <button class="btn btn-primary ms-auto" >
+                  <span class="badge bg-primary p-0">Más info</span>
+          </button>
         </div>
-        <div class="card">
-            <img class="card-img-top" src="holder.js/100x180/" alt="Card image cap">
-            <div class="card-body">
-                <h4 class="card-title">Title</h4>
-                <p class="card-text">Text</p>
+        <div class="row w-100">
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-header d-flex align-items-center">
+                <img class="card-icon" src="./static/images/encriptador-texto.png" alt="Encriptador de texto">
+                <h4 class="card-title m-0">Encriptador de texto</h4>  
+              </div>
+              <div class="card-body">
+                    <p class="card-text">Este desafío trata sobre encriptar y desencriptar un mensaje ingresado por un input, el resultado se mostrará a la derecha junto con un botón para poder copiar dicho resultado. También se tiene en cuenta mensajes de error si se utilizan caracteres que no sean letras minúsculas o en caso de no ingresar ningún texto o sólo espacios.</p>
+                    <a name="" id="" class="btn btn-primary" href="encriptador-texto/encriptador.html" role="button">Ver más</a>
+                </div>
             </div>
+          </div>
+          <!-- 
+          <div class="col-md-4" >
+            <div class="card h-100">
+              <div class="card-header d-flex align-items-center">
+                <img class="card-icon" src="" alt="">
+                <h4 class="card-title m-0"></h4>  
+              </div>
+              <div class="card-body">
+                <p class="card-text">Text</p>
+              </div>
+            </div>
+          </div> -->
         </div>
+      </div>
     </div>
-  
   </main>
   <footer>
-    <!-- place footer here -->
+    <section>
+      <div class="container text-center text-md-start mt-5">
+        <div class="row mt-3">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 ">
+            <img src="./static/images/logoOracleAluraBlanco.png" alt="" width="250" height="50"
+            class="d-inline-block align-text-top mb-4 my-5">
+            <p class="text-white">Challenges realizados en el programa ONE ofrecido por Oracle y Alura Latam.</p>
+          </div>
+
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 mt-5">
+          <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4 text-white fs-5">Contacto</h6>
+            <div class="d-md-block d-flex justify-content-center">
+              <p class="contacto px-2">
+                <i class="fa-brands fa-linkedin text-white"></i>
+                <a class="text-white link-contacto" href="https://www.linkedin.com/in/alejo-sandrini">LinkedIn</a>
+              </p>
+              <p class="contacto px-2">
+                <i class="fa-brands fa-github text-white"></i>
+                <a class="text-white link-contacto" href="https://github.com/alejosandrini" >Github</a>
+              </p>
+              <p class="contacto px-2">
+                <i class="fa-solid fa-envelope text-white"></i>
+                <a class="text-white link-contacto" href="mailto:alejo.sandrini@gmail.com">Mail</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="text-center p-4 text-white">
+      © 2023 Copyright:
+      <a class="text-reset fw-bold text-white" href="https://alejosandrini.github.io/Challenge-ONE/">Portafolio Alejo Sandrini</a>
+    </div>
   </footer>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -83,6 +136,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
+
+<script src="https://kit.fontawesome.com/c3f23dfcf2.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
