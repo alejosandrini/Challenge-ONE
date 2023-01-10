@@ -27,8 +27,18 @@ function mostrarError(mensaje){
 }
 
 function encriptar(){
-    let texto = document.getElementById("texto-ingresado").value;
-    if(textoValido(texto)){
+    let input = document.getElementById("texto-ingresado");
+    let texto = input.value;
+    if(texto.trim()==""){
+        let titulo = document.querySelector(".card-title");
+        if(titulo == null){
+            generarTextoPendiente();
+        }else{
+            titulo.textContent = "No ha ingresado ningún mensaje todavía"
+        }
+        input.value = texto.trim();
+        input.focus();
+    }else if(textoValido(texto)){
         let textoEncriptado = texto.replaceAll("e","enter");
         textoEncriptado = textoEncriptado.replaceAll("i","imes");
         textoEncriptado = textoEncriptado.replaceAll("a","ai");
@@ -42,8 +52,18 @@ function encriptar(){
 }
 
 function desencriptar(){
-    let texto = document.getElementById("texto-ingresado").value;
-    if(textoValido(texto)){
+    let input = document.getElementById("texto-ingresado");
+    let texto = input.value;
+    if(texto.trim()==""){
+        let titulo = document.querySelector(".card-title");
+        if(titulo == null){
+            generarTextoPendiente();
+        }else{
+            titulo.textContent = "No ha ingresado ningún mensaje todavía"
+        }
+        input.value = texto.trim();
+        input.focus();
+    }else if(textoValido(texto)){
         let textoEncriptado = texto.replaceAll("enter","e");
         textoEncriptado = textoEncriptado.replaceAll("imes","i");
         textoEncriptado = textoEncriptado.replaceAll("ai","a");
@@ -77,6 +97,18 @@ function mostrarResultado(texto){
     
     contenedor.appendChild(input);
     contenedor.appendChild(botonCopiar);
+}
+
+function generarTextoPendiente(){
+    let contenedor = document.getElementById("resultado");
+    contenedor.innerHTML =
+    `
+    <img id="img-resultado" src="../static/images/Muñeco.png" alt="Muñeco">
+    <div class="card-body">
+        <h4 class="card-title">No ha ingresado ningún mensaje todavía</h4>
+        <p class="card-text">Ingresa el texto que desees encriptar o desencriptar.</p>
+    </div>
+    `;
 }
 
 function copiar() {
