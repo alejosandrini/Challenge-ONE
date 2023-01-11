@@ -114,6 +114,7 @@ function generarTextoPendiente(){
 function copiar() {
     let copyText = document.getElementById("texto-resultado");
     copyText.select();
-    document.execCommand("copy");
-  }
+    navigator.clipboard.writeText(copyText.value);
+    //document.execCommand("copy"); deprecated
+    }
   

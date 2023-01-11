@@ -14,7 +14,7 @@ html{
     width: 90px;
     height: 36px;
     margin-top: 3vh;
-    margin-left: 3vw;
+    margin-left: 1vw;
 }
 
 #img-resultado{
@@ -107,6 +107,26 @@ p{
     align-self: stretch;
     flex-grow: 0;
     word-wrap: break-word;
+}
+
+a{
+    color: #0A3871 !important;
+}
+
+a:link{
+    text-decoration: none;
+    outline: none;
+    font-family: 'Inter';
+    font-size: large;
+    font-weight: 800;
+}
+
+a:hover{
+    text-decoration: underline #eeaf11;
+}
+
+a:hover i{
+   color: #eeaf11;
 }
 
 #encriptar{
