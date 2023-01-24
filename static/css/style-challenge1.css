@@ -23,12 +23,16 @@ html{
     margin-top: 8vw;
 }
 
+.h-60{
+    height: 60%;
+}
+
 #texto-ingresado{
     width: 80%;
     height: 240px;
     margin-top: 6vh;
     margin-left: 12vw;
-    margin-bottom: 10vw;
+    align-self: center;
 
     font-family: 'Inter';
     font-style: normal;
@@ -181,6 +185,38 @@ label{
     font-weight: 600;
     font-size: 18px;
     line-height: 150%;
+}
+
+.alerta-abierta{
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    padding: 16px;
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+.alerta-cerrada{
+    display: none;
+}
+
+.alerta-valida{
+    border-color: #198754;
+    background-color: rgba(25, 135, 84, 0.3);
+}
+
+.alerta-error{
+    border-color: #dc3545;
+    background-color: rgba(220, 53, 69, 0.3);
+}
+
+.alerta-copy{
+    border-color: #ffc107;
+    background-color: rgba(255, 193, 7, 0.3);
+}
+
+.fa-x{
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {

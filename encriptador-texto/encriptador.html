@@ -28,17 +28,24 @@
                         <i class="fa-solid fa-right-to-bracket"></i>
                     </a>
                 </div>
-                <textarea name="" id="texto-ingresado" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
-                <div class="container mt-5">
-                    <label for="" class="d-block mb-1">
-                        <i class="fa-solid fa-circle-exclamation"></i>  
-                        Solo letras minúsculas y sin acentos
-                    </label>
-                    <div class="d-block d-sm-flex justify-content-center w-100">
-                        <button type="button" class="btn mx-2" id="encriptar" onclick="encriptar()">Encriptar</button>
-                        <button type="button" class="btn mx-2" id="desencriptar" onclick="desencriptar()">Desencriptar</button>
+                <div class="container h-60">
+                    <div class="justify-content-center align-items-center alerta-cerrada" id="mensaje">
+                        <h6 class="m-0">Mensaje de ejemplo</h6>
+                        <i class="fa-solid fa-x ms-auto me-2" onclick="cerrarAlerta()"></i>
                     </div>
-
+                    <textarea name="" id="texto-ingresado" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+                </div>
+                <div class="container d-flex h-25">
+                    <div class="container align-self-end">
+                        <label for="" class="d-block mb-1">
+                            <i class="fa-solid fa-circle-exclamation"></i>  
+                            Solo letras minúsculas y sin acentos
+                        </label>
+                        <div class="d-block d-sm-flex justify-content-center w-100">
+                            <button type="button" class="btn mx-2" id="encriptar" onclick="encriptar()">Encriptar</button>
+                            <button type="button" class="btn mx-2" id="desencriptar" onclick="desencriptar()">Desencriptar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-md-3">
