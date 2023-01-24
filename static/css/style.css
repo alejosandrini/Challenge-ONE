@@ -20,7 +20,6 @@ nav{
     background-color: var(--black) !important;
 }
 
-
 .border-gold{
     --bs-border-color: rgba(252, 163, 17, 0.8);
     --bs-border-width: 2px;
@@ -91,4 +90,20 @@ a:hover{
 
 footer{
     background-color: var(--black);
+}
+
+#contacto{
+    border: 0 none;
+}
+
+#contacto:target{
+    border: 1px solid var(--orange-web-hover-line);
+    border-radius: 10px;
+    padding-top: 8px;
+    transition: border 2s,  padding-top 1s;
+}
+
+#contacto:target h6{
+    color: var(--orange-web-hover) !important;
+    transition: 0.5s;
 }
