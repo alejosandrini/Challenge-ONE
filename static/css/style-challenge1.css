@@ -197,7 +197,7 @@ label{
 }
 
 .alerta-cerrada{
-    display: none;
+    display: none !important;
 }
 
 .alerta-valida{
