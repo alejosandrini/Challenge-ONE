@@ -45,9 +45,11 @@ function encriptar(){
         textoEncriptado = textoEncriptado.replaceAll("o","ober");
         textoEncriptado = textoEncriptado.replaceAll("u","ufat");
         mostrarResultado(textoEncriptado);
+        generarAlerta("El mensaje fue encriptado con éxito", "alerta-valida");
     }else{
         let mensaje = "Hay un carácter inválido, solo utilizar letras minúsculas y sin acentos";
         mostrarError(mensaje);
+        generarAlerta("El mensaje no pudo ser encriptado", "alerta-error");
     }
 }
 
@@ -70,9 +72,11 @@ function desencriptar(){
         textoEncriptado = textoEncriptado.replaceAll("ober","o");
         textoEncriptado = textoEncriptado.replaceAll("ufat","u");
         mostrarResultado(textoEncriptado);
+        generarAlerta("El mensaje fue desencriptado con éxito", "alerta-valida");
     }else{
         let mensaje = "Hay un carácter inválido, solo utilizar letras minúsculas y sin acentos";
         mostrarError(mensaje);
+        generarAlerta("El mensaje no pudo ser desencriptado", "alerta-error");
     }
 }
 
@@ -116,5 +120,29 @@ function copiar() {
     copyText.select();
     navigator.clipboard.writeText(copyText.value);
     //document.execCommand("copy"); deprecated
-    }
-  
+    generarAlerta("El texto ha sido copiado", "alerta-copy")
+}
+
+function generarAlerta(mensaje, tipo){
+    let contenedor = document.getElementById("mensaje");
+    contenedor.classList.remove("alerta-cerrada");
+    contenedor.classList.add("alerta-abierta");
+    
+    removerTipoAlerta(contenedor)
+    contenedor.classList.add(tipo)
+    
+    let texto = contenedor.firstElementChild
+    texto.textContent = mensaje
+}
+
+function cerrarAlerta(){
+    let contenedor = document.getElementById("mensaje");
+    contenedor.classList.remove("alerta-abierta");
+    contenedor.classList.add("alerta-cerrada");
+}
+
+function removerTipoAlerta(contenedor){
+    contenedor.classList.remove("alerta-valida")
+    contenedor.classList.remove("alerta-error")
+    contenedor.classList.remove("alerta-copy")
+}
